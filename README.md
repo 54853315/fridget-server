@@ -44,7 +44,7 @@
 
 ## 🏛️ 系统架构
 
-![Fridget Architecture](https://github.com/user-attachments/assets/d9fd87f8-98a6-42b9-bb42-a1aaf5999612)
+![Fridget Architecture](./System-Architecture-Diagram.png)
 
 ---
 
