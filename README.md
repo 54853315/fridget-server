@@ -5,10 +5,13 @@
 👉 [FridgetFrontend 前端仓库](https://github.com/54853315/fridget-frontend)
 
 如果只用冰箱里的食材就能找到美味的菜肴呢？
-<br> Fridget 是一个基于 AI 的网站，利用大语言模型，根据用户拥有的食材推荐最佳食谱。
-<br>别再为“今天吃什么？”而烦恼，让 AI 为您找到合适的食谱吧！
+
+Fridget 是一个基于 AI 的网站，利用大语言模型，根据用户拥有的食材推荐最佳食谱。
+
+别再为“今天吃什么？”而烦恼，让 AI 为您找到合适的食谱吧！
 
 🚀 **主要功能**
+
 1️⃣ **智能食谱搜索**：AI 搜索网络，找到适合您现有食材的食谱。
 
 2️⃣ **个性化推荐**：利用最近邻算法分析并反映用户的饮食习惯和偏好。
@@ -17,8 +20,7 @@
 
 
 > 本项目的初始版本来源于 [Fridget Server](https://github.com/sinaetown/FridgetServer.git) 项目，他们在 [YouTube](https://youtu.be/FFFVZ70Mt_E) 上展示的 Demo 极具启发性。在此向原团队（Sinae Hong, Hanseung Choi, Samuel Han, Hojun Kwak）表示诚挚的敬意和感谢！
-
-在原项目的基础上，我进行了二次开发和一些技术调整，以便更好地适应本地化需求和进行技术探索。
+> 在原项目的基础上，我进行了二次开发和一些技术调整，以便更好地适应本地化需求和进行技术探索。
 ## 🔧 主要技术改进
 
 - **AI 模型迁移**: 将食谱生成的核心 AI 从 OpenAI 替换为 **[Qwen3](https://www.aliyun.com/product/tongyi)**，以优化在中国大陆地区的访问速度和响应效果。
