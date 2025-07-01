@@ -76,8 +76,9 @@ source venv/bin/activate
 ```bash
 # 使用 Python 3
 pip install flask requests spacy scikit-learn
-# 如果使用 Python 3.11+，需要手动安装 spaCy 模型
 python -m spacy download zh_core_web_md
+# 如果使用 Python 3.11+，需要手动安装 spaCy 模型进行本地安装
+# pip3 install zh_core_web_md-3.8.0-py3-none-any.whl
 ```
 
 </details>

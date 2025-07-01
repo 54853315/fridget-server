@@ -11,6 +11,7 @@ import time
 
 app = Flask(__name__)
 ALI_API_KEY = os.getenv('ALI_API_KEY', 'YOUR KEY')
+ALI_API_MODE_TYPE = os.getenv('ALI_API_MODE_TYPE','qwen-plus-2025-04-28')
 PEXELS_API_KEY = os.getenv('PEXELS_API_KEY', 'YOUR KEY')
 nlp = spacy.load("zh_core_web_md")
 
@@ -109,7 +110,7 @@ def generate():
             # 'X-DashScope-SSE': 'enable'   //steam
         }
         payload = {
-            'model': 'qwen-plus-1220',
+            'model': ALI_API_MODE_TYPE,
             'input':{
             'messages': [{"role": "system", "content": "你是一个食谱推荐助手"},{'role': 'user', 'content': prompt}],
             },
