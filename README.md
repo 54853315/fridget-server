@@ -5,11 +5,14 @@
 👉 [FridgetFrontend 前端仓库](https://github.com/54853315/fridget-frontend)
 
 如果只用冰箱里的食材就能找到美味的菜肴呢？
+
 Fridget 是一个基于 AI 的网站，利用大语言模型，根据用户拥有的食材推荐最佳食谱。
+
 别再为“今天吃什么？”而烦恼，让 AI 为您找到合适的食谱吧！
 
 
 > 本项目的初始版本来源于 [Fridget Server](https://github.com/sinaetown/FridgetServer.git) 项目，他们在 [YouTube](https://youtu.be/FFFVZ70Mt_E) 上展示的 Demo 极具启发性。在此向原团队（Sinae Hong, Hanseung Choi, Samuel Han, Hojun Kwak）表示诚挚的敬意和感谢！
+
 > 在原项目的基础上，我进行了二次开发和一些技术调整，以便更好地适应本地化需求和进行技术探索。
 ## 🔧 主要技术改进
 
