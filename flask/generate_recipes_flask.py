@@ -11,7 +11,7 @@ import time
 
 app = Flask(__name__)
 ALI_API_KEY = os.getenv('ALI_API_KEY', 'YOUR KEY')
-ALI_API_MODE_TYPE = os.getenv('ALI_API_MODE_TYPE','qwen-plus-2025-04-28')
+ALI_API_MODE_TYPE = os.getenv('ALI_API_MODE_TYPE','qwen-plus-2025-07-14')
 PEXELS_API_KEY = os.getenv('PEXELS_API_KEY', 'YOUR KEY')
 nlp = spacy.load("zh_core_web_md")
 
@@ -85,9 +85,9 @@ def generate():
         你可以获取用户冰箱中现有的食材列表：
 可用食材：{', '.join(ingredients)}
 
-        请基于这些食材，**只推荐6道可以制作的菜谱**。
+        请基于这些主要食材，**只推荐8道可以制作的菜谱**。食材中应有详细的佐料和调味品。
         
-        **重要：只输出一个包含6个对象的JSON数组，不要输出任何其他文字、解释或格式说明。**
+        **重要：只输出一个包含8个对象的JSON数组，不要输出任何其他文字、解释或格式说明。**
 
         ### Output Format (Valid JSON)
         [
@@ -99,7 +99,8 @@ def generate():
                 "nutrition": {{"calories": "", "protein": "", "carbs": "", "fat": "", "fiber": "", "sugar": "", "sodium": ""}},
                 "ingredients": [{{"name": "ingredient", "quantity": "50g"}}],
                 "steps": ["Step 1", "Step 2"],
-                "spiceLevel": 2
+                "spiceLevel": 2,
+                "cookingDifficultyLevel": "地狱难度"
             }}
         ]
         """

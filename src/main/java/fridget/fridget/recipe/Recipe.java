@@ -20,4 +20,5 @@ public class Recipe {
     private String reference;
     private List<String> missingIngredients;
     private int spiceLevel;
+    private String cookingDifficultyLevel;
 }
