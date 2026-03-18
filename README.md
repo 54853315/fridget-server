@@ -1,104 +1,117 @@
-# 🍏 AI 驱动的食谱推荐网站 Fridget Server
+<div align="center">
 
-<img width="797" alt="开发阶段界面预览" src="https://github.com/54853315/fridget-frontend/blob/main/frontend/static/images/dev-stage-preview-image.jpeg?raw=true" />
+# 🍏 Fridget Server
+**AI-Driven Smart Recipe & Ingredient Management Engine**
 
-👉 [FridgetFrontend 前端仓库](https://github.com/54853315/fridget-frontend)
+**English** | [简体中文](./README_zh-CN.md)
 
-**如何只用冰箱里的食材就能找到美味的菜肴呢？** 别再为“今天吃什么？”而烦恼，让 AI 为您找到合适的食谱吧！
+[![Java](https://img.shields.io/badge/Java-11-ED8B00?logo=openjdk&logoColor=white)](#)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.7.11-6DB33F?logo=springboot&logoColor=white)](#)
+[![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)](#)
+[![Flask](https://img.shields.io/badge/Flask-2.x-000000?logo=flask&logoColor=white)](#)
+[![Qwen AI](https://img.shields.io/badge/AI-Qwen3-412991?logo=alibabacloud&logoColor=white)](#)
+[![MongoDB](https://img.shields.io/badge/MongoDB-4.x-47A248?logo=mongodb&logoColor=white)](#)
+[![Redis](https://img.shields.io/badge/Redis-6.x-DC382D?logo=redis&logoColor=white)](#)
 
-Fridget 是一个基于AI和大语言模型，并根据用户拥有的食材推荐最佳食谱的网站程序。
+*An out-of-the-box, commercial-grade open-source application solving the ultimate "what to eat today" dilemma.*
 
-> 本项目的初始版本来源于 [Fridget Server](https://github.com/sinaetown/FridgetServer.git) 项目，他们在 [YouTube](https://youtu.be/FFFVZ70Mt_E) 上展示的 Demo 极具启发性。在此向原团队（Sinae Hong, Hanseung Choi, Samuel Han, Hojun Kwak）表示诚挚的敬意和感谢！
+<br/>
 
-> 在原项目的基础上，我进行了二次开发和一些技术调整，以便更好地适应本地化需求和进行技术探索。
-## 🔧 主要技术改进
+<img width="800" alt="Fridget UI Preview" src="https://github.com/54853315/fridget-frontend/blob/main/frontend/static/images/dev-stage-preview-image.jpeg?raw=true" />
 
-- **AI 模型迁移**: 将食谱生成的核心 AI 从 OpenAI 替换为 **[Qwen3](https://www.aliyun.com/product/tongyi)**，以优化在中国大陆地区的访问速度和响应效果。
-- **API 接口优化**:
-  - 精简了 `/ingredients` 相关的数据传输对象 (DTO)，提升了交互效率。
-  - 新增了 `/cooking-preference` 接口，以支持更丰富的用户偏好设置。
-  - 新增了 PEXELS API 集成，为食谱推荐提供精美的配图展示，增强用户体验。
-  - `/recipe/recommend` 接口新增 24 小时 AI 结果缓存机制，提升了系统响应速度和资源利用率。
-- **前端重构**: 前端使用 SvelteKit 进行了完全重构，旨在探索新的前端技术栈并提升开发体验。
+<br/>
 
-## 🛠 技术栈
+👉 **[Explore Fridget Frontend Repository](https://github.com/54853315/fridget-frontend)**
 
-### 前端
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white) ![Chakra UI](https://img.shields.io/badge/Chakra%20UI-319795?style=for-the-badge&logo=chakraui&logoColor=white) ![Material UI](https://img.shields.io/badge/Material%20UI-0081CB?style=for-the-badge&logo=mui&logoColor=white)
-
-### 后端
-![Java 11](https://img.shields.io/badge/java%2011-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![Java Spring](https://img.shields.io/badge/Java%20Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white) ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white) ![Spring Security](https://img.shields.io/badge/Spring%20Security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white) ![Gradle](https://img.shields.io/badge/Gradle-02303A.svg?style=for-the-badge&logo=Gradle&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white) ![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white) ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![JSON Web Tokens](https://img.shields.io/badge/JSON%20Web%20Tokens-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
-
-### AI/ML
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Qwen3](https://img.shields.io/badge/%E9%80%9A%E4%B9%89%E5%8D%83%E9%97%AE-412991?style=for-the-badge&logo=alibabacloud&logoColor=white) ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+</div>
 
 ---
 
-## 🏛️ 系统架构
+## 📖 Introduction
 
-![Fridget Architecture](./System-Architecture-Diagram.png)
+**Fridget** is an intelligent recipe recommendation engine built on large language models. It not only eliminates the daily stress of deciding what to eat but also champions a **Zero Food Waste** lifestyle.
+
+Simply input the leftover ingredients in your fridge, and Fridget's smart analysis engine will instantly generate customized, step-by-step recipes complete with high-quality images.
+
+> **Acknowledgement**: The core business logic was inspired by the geeky exploration of Sinae Hong's team on YouTube. Building upon that foundation, we have implemented localization adjustments and AI engine upgrades to deliver this mature and stable open-source application.
+
+## ✨ Core Features
+
+- ⚡️ **Blazing Fast Localized AI Engine**: The underlying LLM has been seamlessly migrated to **Qwen3**, optimized for the APAC network environment to provide millisecond-level content generation.
+- 🎨 **Immersive Multimedia Experience**: Natively integrated with the PEXELS API, automatically matching high-quality commercial images to AI-generated dishes, bidding farewell to boring plain-text recipes.
+- 🧠 **Smart Cache Scheduling**: A 24-hour AI result caching strategy (powered by Redis) drastically cuts API costs and system latency while ensuring recommendation diversity.
+- 🧩 **Highly Extensible Hybrid Microservices**:
+  - **Core Business Gateway**: Built with Java Spring Boot, providing robust authentication, data persistence (MongoDB), and high-concurrency handling.
+  - **AI Inference Service**: Built with Python Flask, combining `scikit-learn` and `spaCy` for NLP processing and vector matching, decoupling heavy computational logic.
+- ⚙️ **Granular User Preferences**: The API layer fully supports deep customization of dietary restrictions and taste preferences, delivering truly personalized recipe generation.
+
+## 🏛️ System Architecture
+
+A minimalist yet highly efficient data flow design ensuring perfect decoupling of core business logic and AI computational power.
+
+<div align="center">
+  <img src="./System-Architecture-Diagram.png" alt="Fridget Architecture" width="800" />
+</div>
 
 ---
 
-## 🚀 服务启动指南
+## 🚀 Getting Started
 
-### 1. 启动 Redis
+### 1. Start Redis
 ```bash
 brew services start redis
 ```
 
-### 2. 启动 MongoDB
+### 2. Start MongoDB
 
 ```bash
 brew tap mongodb/brew
 brew services start mongodb-community
 ```
 
-### 3. 启动 Flask 服务
+### 3. Start Flask Service
 
-(1) 创建并激活虚拟环境
+(1) Create and activate a virtual environment
 ```bash
 cd FridgetServer/flask
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-(2) 安装必要的依赖
+(2) Install necessary dependencies
   
 ```bash
-# 使用 Python 3
+# Using Python 3
 pip install flask requests spacy scikit-learn
 python -m spacy download zh_core_web_md
-# 如果使用 Python 3.11+，需要手动安装 spaCy 模型进行本地安装
+# If using Python 3.11+, manual installation of the spaCy model is required
 # pip3 install zh_core_web_md-3.8.0-py3-none-any.whl
 ```
 
-</details>
+(3) Set `ALI_API_KEY` and `PEXELS_API_KEY` according to the comments in `generate_recipes_flask.py`
 
-(3) 根据 [generate_recipes_flask.py](./flask/generate_recipes_flask.py) 中的注释设置 `ALI_API_KEY`和`PEXELS_API_KEY`
-
-```
+```bash
 export ALI_API_KEY=''
 export PEXELS_API_KEY=''
 ```
 
-**重要**: 请将 `ALI_API_KEY` 和 `PEXELS_API_KEY` 作为环境变量进行配置，以避免密钥泄露。
+**Important**: Please configure `ALI_API_KEY` and `PEXELS_API_KEY` as environment variables to avoid key leakage.
 
-(4) 启动 Flask 服务
+(4) Start Flask service
 
 ```bash
 python -m flask --app generate_recipes_flask run --host=0.0.0.0 --port=5001 #--debug
 ```
 
-### 3. 启动 Spring Boot 服务
+### 4. Start Spring Boot Service
 ```bash
 cd FridgetServer/
 ./gradlew compileJava #--stacktrace
 ./gradlew build
-java -jar build/libs/fridgeproject-0.0.1-SNAPSHOT.jar
+java -jar build/libs/fridget-0.0.1-SNAPSHOT.jar
 ```
 
-### 3.1 本地二次开发
+### 4.1 Local Development
 
 ```bash
 cd FridgetServer/

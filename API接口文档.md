@@ -88,7 +88,8 @@ FridgetServer 是一个基于 Spring Boot 的后端服务，提供用户管理�
   "imageUrl": "食谱图片URL",
   "reference": "参考来源",
   "missingIngredients": ["缺少的食材列表"],
-  "spiceLevel": "辣度等级(数值)"
+  "spiceLevel": "辣度等级(数值)",
+  "cookingDifficultyLevel": "烹饪难度等级(简单/中等/困难)"
 }
 ```
 
